@@ -12,12 +12,17 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import ReplyIcon from "@mui/icons-material/Reply";
 import NotificationsOffIcon from "@mui/icons-material/NotificationsOff";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import SendIcon from "@mui/icons-material/Send";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function chats() {
+  const iconClasses =
+    "text-xl text-default-500 pointer-events-none flex-shrink-0";
   return (
     <div className="flex">
       {/*First Portion: Icons*/}
-      <div className="w-20 h-screen flex flex-col justify-between items-center border-solid border-white border-r-gray-200 p-2">
+      <div className="w-20 min-h-screen flex flex-col justify-between items-center border-solid border-white border-r-gray-200 p-2">
         <div>
           <Image
             src="/logo.jpg"
@@ -46,7 +51,7 @@ export default function chats() {
         />
       </div>
       {/*Second Portion: Chat List*/}
-      <div className="w-1/4 h-screen mx-4">
+      <div className="w-1/4 min-h-screen mx-4">
         <div className="flex items-center justify-around py-5">
           <h2 className="mr-72">Chats</h2>
           <HighlightOffTwoToneIcon
@@ -134,7 +139,7 @@ export default function chats() {
         </div>
       </div>
       {/*Third Portion: Chat Message*/}
-      <div className="w-1/2 h-screen border-solid border-white border-x-gray-200">
+      <div className="w-1/2 min-h-screen border-solid border-white border-x-gray-200">
         <div>
           <div className="flex justify-between px-6 py-8">
             <div className="flex items-center">
@@ -225,17 +230,38 @@ export default function chats() {
                 </p>
               </div>
             </div>
-            <div className="flex items-end py-3 flex-col">
+            {/* <div className="flex items-end py-3 flex-col">
               <p className="bg-green-500 text-white text-sm flex items-center p-4 rounded-3xl max-w-96 max-h-full">
                 We understand the inconvenience caused and ensure you that our
-                team is actively working to accomodate and resolve the problem.
+                team is actively working.
               </p>
+            </div> */}
+          </div>
+          <div className="flex justify-center w-full h-full mt-5">
+            <AddCircleIcon
+              className="mb-6 mr-3"
+              sx={{ color: "#E5E4E2", width: 30, height: 30 }}
+            />
+            <div className="w-full relative">
+              <input
+                type="text"
+                className="rounded-full p-2 border-gray-300 border-solid w-full px-2 pl-5 pr-8"
+              />
+              <SendIcon
+                className="absolute top-1.5 right-2"
+                sx={{
+                  color: "#E5E4E2",
+                  width: 20,
+                  height: 20,
+                  transform: "rotate(-45deg)",
+                }}
+              />
             </div>
           </div>
         </div>
       </div>
       {/*Fourth Portion: Chat Settings*/}
-      <div className="w-1/5 h-screen py-16 px-7">
+      <div className="w-1/5 min-h-screen py-16 px-7">
         <div className="flex flex-col items-center">
           <div className="max-h-10 relative mr-10">
             <AccountCircleIcon

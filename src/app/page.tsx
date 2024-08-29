@@ -14,17 +14,26 @@ export default function Home() {
         />
         <ul className="list-none flex justify-around">
           <li>
-            <Link className="no-underline text-black m-3" href="/features">
+            <Link
+              className="no-underline text-black m-3 font-semibold"
+              href="/features"
+            >
               Features
             </Link>
           </li>
           <li>
-            <Link className="no-underline text-black m-3" href="desktopapp">
+            <Link
+              className="no-underline text-black m-3 font-semibold"
+              href="desktopapp"
+            >
               Desktop App
             </Link>
           </li>
           <li>
-            <Link className="no-underline text-black m-3" href="privacy">
+            <Link
+              className="no-underline text-black m-3 font-semibold"
+              href="privacy"
+            >
               Privacy & Safety
             </Link>
           </li>
