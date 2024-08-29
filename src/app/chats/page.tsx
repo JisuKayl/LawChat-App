@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
@@ -15,10 +17,21 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import SendIcon from "@mui/icons-material/Send";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import PhotoOutlinedIcon from "@mui/icons-material/PhotoOutlined";
+import AbcOutlinedIcon from "@mui/icons-material/AbcOutlined";
+import AttachFileOutlinedIcon from "@mui/icons-material/AttachFileOutlined";
+
+import { useState } from "react";
 
 export default function chats() {
-  const iconClasses =
-    "text-xl text-default-500 pointer-events-none flex-shrink-0";
+  const [isDropdown, setIsDropdown] = useState(false);
+  const [isChevronRight, setIsChevronRight] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdown(!isDropdown);
+    setIsChevronRight(!isChevronRight);
+  };
+
   return (
     <div className="flex">
       {/*First Portion: Icons*/}
@@ -164,9 +177,9 @@ export default function chats() {
             </div>
           </div>
         </div>
-        <div className="px-5">
+        <div className="px-5 flex flex-col justify-around min-h-screen">
           <div>
-            <p className="flex justify-center text-gray-600 py-3 text-sm">
+            <p className="flex justify-center text-gray-600  text-sm">
               Sun, Aug 20 at 5:45 PM
             </p>
             <div className="flex items-center">
@@ -237,25 +250,27 @@ export default function chats() {
               </p>
             </div> */}
           </div>
-          <div className="flex justify-center w-full h-full mt-5">
-            <AddCircleIcon
-              className="mb-6 mr-3"
-              sx={{ color: "#E5E4E2", width: 30, height: 30 }}
-            />
-            <div className="w-full relative">
-              <input
-                type="text"
-                className="rounded-full p-2 border-gray-300 border-solid w-full px-2 pl-5 pr-8"
+          <div className="fixed max-w-2xl bottom-1 w-full bg-white jus">
+            <div className="flex justify-center w-full h-full mt-5">
+              <AddCircleIcon
+                className="mb-6 mr-10"
+                sx={{ color: "#E5E4E2", width: 30, height: 30 }}
               />
-              <SendIcon
-                className="absolute top-1.5 right-2"
-                sx={{
-                  color: "#E5E4E2",
-                  width: 20,
-                  height: 20,
-                  transform: "rotate(-45deg)",
-                }}
-              />
+              <div className="w-full relative">
+                <input
+                  type="text"
+                  className="rounded-full p-2 border-gray-300 border-solid w-full px-2 pl-5 pr-8"
+                />
+                <SendIcon
+                  className="absolute top-1.5 right-2"
+                  sx={{
+                    color: "#E5E4E2",
+                    width: 20,
+                    height: 20,
+                    transform: "rotate(-45deg)",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -286,24 +301,172 @@ export default function chats() {
           />
         </div>
         <div className="mt-10 ">
-          <div className="flex justify-between items-center font-semibold ">
+          <div
+            className="flex justify-between items-center font-semibold mt-4"
+            onClick={toggleDropdown}
+          >
             <p>Customize Chat</p>
-            <ChevronRightIcon className="" sx={{ width: 30, height: 30 }} />
+            {isChevronRight ? (
+              <KeyboardArrowDownIcon
+                className=""
+                sx={{ width: 30, height: 30 }}
+              />
+            ) : (
+              <ChevronRightIcon className="" sx={{ width: 30, height: 30 }} />
+            )}
           </div>
-          <div className="flex justify-between items-center font-semibold mt-4">
+          {isDropdown && (
+            <div>
+              <div className="flex justify-start items-center my-2">
+                <EditOutlinedIcon
+                  className="bg-gray-200 rounded-full p-1 mr-3"
+                  sx={{ width: 30, height: 30 }}
+                />
+                <p>Change chat name</p>
+              </div>
+              <div className="flex justify-start items-center  my-2">
+                <PhotoOutlinedIcon
+                  className="bg-gray-200 rounded-full p-1 mr-3"
+                  sx={{ width: 30, height: 30 }}
+                />
+                <p>Change photo</p>
+              </div>
+              <div className="flex justify-start items-center  my-2">
+                <AbcOutlinedIcon
+                  className="bg-gray-200 rounded-full p-1 mr-3"
+                  sx={{ width: 30, height: 30 }}
+                />
+                <p>Edit nicknames</p>
+              </div>
+              <div className="flex justify-start items-center  my-2">
+                <SearchIcon
+                  className="bg-gray-200 rounded-full p-1 mr-3"
+                  sx={{ width: 30, height: 30 }}
+                />
+                <p>Search in conversations</p>
+              </div>
+            </div>
+          )}
+          <div
+            className="flex justify-between items-center font-semibold mt-4"
+            onClick={toggleDropdown}
+          >
             <p>Chat Members</p>
-            <ChevronRightIcon className="" sx={{ width: 30, height: 30 }} />
+            {isChevronRight ? (
+              <KeyboardArrowDownIcon
+                className=""
+                sx={{ width: 30, height: 30 }}
+              />
+            ) : (
+              <ChevronRightIcon className="" sx={{ width: 30, height: 30 }} />
+            )}
           </div>
-          <div className="flex justify-between items-center font-semibold mt-4">
+          {isDropdown && (
+            <div className="flex flex-col">
+              <div className="flex justify-between items-center my-2">
+                <div className="max-h-10 relative mr-5">
+                  <AccountCircleIcon
+                    className="mb-6"
+                    sx={{ color: "gray", width: 40, height: 40 }}
+                  />
+                </div>
+                <div className="max-w-60 w-full">
+                  <p className="font-semibold text-sm">Joshua Martins</p>
+                  <p className="max-w-fit max-h-10 whitespace-nowrap overflow-hidden text-ellipsis text-xs text-gray-400">
+                    Associate Atty. Martins
+                  </p>
+                </div>
+                <div className="flex">
+                  <MoreHorizIcon
+                    className="rounded-full"
+                    sx={{ width: 20, height: 20 }}
+                  />
+                </div>
+              </div>
+              <div className="flex justify-between items-center my-2">
+                <div className="max-h-10 relative mr-5">
+                  <AccountCircleIcon
+                    className="mb-6"
+                    sx={{ color: "gray", width: 40, height: 40 }}
+                  />
+                </div>
+                <div className="max-w-60 w-full">
+                  <p className="font-semibold text-sm">Marvin Malsada</p>
+                  <p className="max-w-fit max-h-10 whitespace-nowrap overflow-hidden text-ellipsis text-xs text-gray-400">
+                    Associate Atty. Marvin
+                  </p>
+                </div>
+                <div className="flex">
+                  <MoreHorizIcon
+                    className="rounded-full"
+                    sx={{ width: 20, height: 20 }}
+                  />
+                </div>
+              </div>
+              <div className="flex justify-between items-center my-2">
+                <div className="max-h-10 relative mr-5">
+                  <AccountCircleIcon
+                    className="mb-6"
+                    sx={{ color: "gray", width: 40, height: 40 }}
+                  />
+                </div>
+                <div className="max-w-60 w-full">
+                  <p className="font-semibold text-sm">Raphael Sy</p>
+                  <p className="max-w-fit max-h-10 whitespace-nowrap overflow-hidden text-ellipsis text-xs text-gray-400">
+                    Legal Atty. Raphael
+                  </p>
+                </div>
+                <div className="flex">
+                  <MoreHorizIcon
+                    className="rounded-full"
+                    sx={{ width: 20, height: 20 }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+          <div
+            className="flex justify-between items-center font-semibold mt-4"
+            onClick={toggleDropdown}
+          >
             <p className="flex justify-start">Media and Files</p>
-            <ChevronRightIcon
-              className="flex justify-end"
-              sx={{ width: 30, height: 30 }}
-            />
+            {isChevronRight ? (
+              <KeyboardArrowDownIcon
+                className=""
+                sx={{ width: 30, height: 30 }}
+              />
+            ) : (
+              <ChevronRightIcon className="" sx={{ width: 30, height: 30 }} />
+            )}
           </div>
+          {isDropdown && (
+            <div>
+              <div className="flex justify-start items-center my-2">
+                <AttachFileOutlinedIcon
+                  className="bg-gray-200 rounded-full p-1 mr-3"
+                  sx={{ width: 30, height: 30, transform: "rotate(45deg)" }}
+                />
+                <p>Attachment</p>
+              </div>
+              <div className="flex justify-start items-center  my-2">
+                <PhotoOutlinedIcon
+                  className="bg-gray-200 rounded-full p-1 mr-3"
+                  sx={{ width: 30, height: 30 }}
+                />
+                <p>Media</p>
+              </div>
+            </div>
+          )}
           <div className="flex justify-between items-center font-semibold mt-4">
             <p>Privacy & Support</p>
-            <ChevronRightIcon className="" sx={{ width: 30, height: 30 }} />
+            {isChevronRight ? (
+              <KeyboardArrowDownIcon
+                className=""
+                sx={{ width: 30, height: 30 }}
+              />
+            ) : (
+              <ChevronRightIcon className="" sx={{ width: 30, height: 30 }} />
+            )}
           </div>
         </div>
       </div>
