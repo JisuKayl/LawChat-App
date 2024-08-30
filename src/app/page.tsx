@@ -47,14 +47,14 @@ export default function Home() {
               It makes it easy to communicate and ask for help
             </p>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col cursor-default">
             <Link
-              className="no-underline text-white font-medium p-3"
+              className="no-underline text-white font-medium p-3 cursor-default"
               href="/login"
             >
               <button
                 type="button"
-                className="text-base w-fit border-none focus:outline-none text-white bg-red-600 rounded-full px-5 py-2.5 me-2 mb-2 mt-10"
+                className="text-base w-fit border-none focus:outline-none text-white bg-red-600 rounded-full px-5 py-2.5 me-2 mb-2 mt-10 cursor-pointer"
               >
                 Continue as Admin
               </button>
