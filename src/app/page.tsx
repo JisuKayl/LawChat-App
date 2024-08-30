@@ -15,7 +15,7 @@ export default function Home() {
         <ul className="list-none flex justify-around">
           <li>
             <Link
-              className="no-underline text-black m-3 font-semibold"
+              className="no-underline text-black m-3 font-semibold hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md"
               href="/features"
             >
               Features
@@ -23,7 +23,7 @@ export default function Home() {
           </li>
           <li>
             <Link
-              className="no-underline text-black m-3 font-semibold"
+              className="no-underline text-black m-3 font-semibold hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md"
               href="desktopapp"
             >
               Desktop App
@@ -31,7 +31,7 @@ export default function Home() {
           </li>
           <li>
             <Link
-              className="no-underline text-black m-3 font-semibold"
+              className="no-underline text-black m-3 font-semibold hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md"
               href="privacy"
             >
               Privacy & Safety

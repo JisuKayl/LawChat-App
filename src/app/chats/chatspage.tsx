@@ -126,21 +126,21 @@ export default function chats() {
             height={45}
           />
           <ChatBubbleIcon
-            className="mb-6 cursor-pointer"
+            className="mb-6 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 py-1 rounded-md"
             sx={{ color: "gray", width: 50, height: 40 }}
           />
           <PeopleAltIcon
-            className="mb-6"
+            className="mb-6 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 py-1 rounded-md"
             sx={{ color: "gray", width: 50, height: 40 }}
           />
           <LocationOnIcon
-            className="mb-6"
+            className="mb-6 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 py-1 rounded-md"
             sx={{ color: "gray", width: 50, height: 40 }}
           />
         </div>
 
         <AccountCircleIcon
-          className="mb-6"
+          className="mb-6 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 rounded-md"
           sx={{ color: "gray", width: 50, height: 50 }}
         />
       </div>
@@ -149,6 +149,7 @@ export default function chats() {
         <div className="flex items-center justify-around py-5 ">
           <h2 className="mr-72">Chats</h2>
           <CreateIcon
+            className="cursor-pointer"
             sx={{
               color: "gray",
               width: 30,
@@ -171,14 +172,14 @@ export default function chats() {
           />
         </div>
         {showPopup9 && (
-          <div className="flex justify-between items-end group px-0.5 py-6 rounded-lg hover:bg-gray-300 cursor-pointer">
+          <div className="flex justify-between items-end group px-0.5 py-6 rounded-lg hover:bg-gray-300 transition-all ease-in-out duration-500 cursor-pointer">
             <div className="max-h-10 relative mr-5">
               <AccountCircleIcon
                 className="mb-6"
                 sx={{ color: "gray", width: 50, height: 50 }}
               />
               <AccountCircleIcon
-                className="mb-6 absolute -top-5 left-7 rounded-full bg-white group-hover:bg-gray-300"
+                className="mb-6 absolute -top-5 left-7 rounded-full bg-white group-hover:bg-gray-300 hover:bg-gray-300 transition-all ease-in-out duration-500"
                 sx={{ color: "gray", width: 50, height: 50 }}
               />
             </div>
@@ -191,7 +192,7 @@ export default function chats() {
             <div className="flex relative">
               <p className="mr-2 opacity-100 group-hover:opacity-0 ">1m</p>
               <CircleIcon
-                className="rounded-full opacity-100 group-hover:opacity-0"
+                className="rounded-full opacity-100 group-hover:opacity-0 "
                 sx={{ color: "blue", width: 10, height: 10 }}
               />
               <MoreHorizIcon
@@ -282,12 +283,12 @@ export default function chats() {
             </div>
             <div>
               <AddCircleOutlineIcon
-                className="mr-4 cursor-pointer"
+                className="mr-4 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500  rounded-full"
                 sx={{ width: 30, height: 30 }}
                 onClick={togglePopup1}
               />
               <MoreHorizIcon
-                className="cursor-pointer"
+                className="cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500  rounded-full"
                 sx={{ width: 30, height: 30 }}
                 onClick={toggleChevron}
               />
@@ -685,7 +686,7 @@ export default function chats() {
             <div className="bg-white rounded-lg p-6 w-fit h-48 border shadow-2xl relative">
               <p className="font-semibold text-center">Change chat name</p>
               <CancelIcon
-                className="absolute top-2 right-2 rounded-full"
+                className="absolute top-2 right-2 rounded-full cursor-pointer"
                 sx={{
                   color: "#E5E4E2",
                   backgroundColor: "black",
@@ -725,17 +726,17 @@ export default function chats() {
         </div>
       )}
       {showPopup7 && (
-        <div className="fixed top-60 left-96 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 w-fit h-64 border shadow-2xl relative">
+        <div className="fixed top-60 left-96 flex items-center justify-center ">
+          <div className="bg-white rounded-lg p-6 w-fit h-72 border shadow-2xl relative ">
             <div>
-              <div className="flex justify-start items-center my-2">
+              <div className="flex justify-start items-center my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md">
                 <DoneAllIcon
                   className="bg-gray-200 rounded-full p-1 mr-3"
                   sx={{ width: 30, height: 30 }}
                 />
                 <p className="text-sm">Mark as read</p>
               </div>
-              <div className="flex justify-start items-center my-2 border-solid border-white border-b-gray-300 py-2">
+              <div className="flex justify-start items-center my-2 border-solid cursor-pointer border-white border-b-gray-300 py-1  hover:bg-gray-300 transition-all ease-in-out duration-500 px-2  rounded-md">
                 <NotificationsOffIcon
                   className="bg-gray-200 rounded-full p-1 mr-3 "
                   sx={{ width: 30, height: 30 }}
@@ -743,7 +744,7 @@ export default function chats() {
                 <p className="text-sm">Mute Notifications</p>
               </div>
               <div
-                className="flex justify-start items-center  my-2 cursor-pointer"
+                className="flex justify-start items-center  my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md"
                 onClick={togglePopup8}
               >
                 <DeleteIcon
@@ -752,14 +753,14 @@ export default function chats() {
                 />
                 <p className="text-sm">Delete chat</p>
               </div>
-              <div className="flex justify-start items-center  my-2">
+              <div className="flex justify-start items-center  my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md">
                 <ReportGmailerrorredIcon
                   className="bg-gray-200 rounded-full p-1 mr-3"
                   sx={{ width: 30, height: 30 }}
                 />
                 <p className="text-sm">Report</p>
               </div>
-              <div className="flex justify-start items-center  my-2">
+              <div className="flex justify-start items-center  my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md">
                 <LogoutIcon
                   className="bg-gray-200 rounded-full p-1 mr-3"
                   sx={{ width: 30, height: 30 }}
@@ -828,17 +829,17 @@ export default function chats() {
           </div>
           <div className=" flex justify-center mt-3">
             <NotificationsOffIcon
-              className="bg-gray-300 rounded-full p-1 mr-2"
+              className="bg-gray-300 rounded-full p-1 mr-2 cursor-pointer"
               sx={{ color: "gray", width: 30, height: 30 }}
             />
             <SearchIcon
-              className="bg-gray-300 rounded-full p-1 ml-2"
+              className="bg-gray-300 rounded-full p-1 ml-2 cursor-pointer"
               sx={{ color: "gray", width: 30, height: 30 }}
             />
           </div>
           <div className="mt-10 ">
             <div
-              className="flex justify-between items-center font-semibold mt-4 cursor-pointer"
+              className="flex justify-between items-center font-semibold mt-4 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md"
               onClick={toggleDropdown1}
             >
               <p>Customize Chat</p>
@@ -854,7 +855,7 @@ export default function chats() {
             {isDropdown1 && (
               <div>
                 <div
-                  className="flex justify-start items-center my-2 cursor-pointer"
+                  className="flex justify-start items-center my-2 cursor-pointer  hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md"
                   onClick={togglePopup6}
                 >
                   <EditOutlinedIcon
@@ -864,7 +865,7 @@ export default function chats() {
                   <p className="text-sm">Change chat name</p>
                 </div>
                 <div
-                  className="flex justify-start items-center  my-2 cursor-pointer"
+                  className="flex justify-start items-center  my-2 cursor-pointer  hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md"
                   onClick={togglePopup5}
                 >
                   <PhotoOutlinedIcon
@@ -873,14 +874,14 @@ export default function chats() {
                   />
                   <p className="text-sm">Change photo</p>
                 </div>
-                <div className="flex justify-start items-center  my-2 cursor-pointer">
+                <div className="flex justify-start items-center  my-2 cursor-pointer  hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md">
                   <AbcOutlinedIcon
                     className="bg-gray-200 rounded-full p-1 mr-3 cursor-pointer"
                     sx={{ width: 30, height: 30 }}
                   />
                   <p className="text-sm">Edit nicknames</p>
                 </div>
-                <div className="flex justify-start items-center  my-2 cursor-pointer">
+                <div className="flex justify-start items-center  my-2 cursor-pointer  hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md">
                   <SearchIcon
                     className="bg-gray-200 rounded-full p-1 mr-3 cursor-pointer"
                     sx={{ width: 30, height: 30 }}
@@ -890,7 +891,7 @@ export default function chats() {
               </div>
             )}
             <div
-              className="flex justify-between items-center font-semibold mt-4 cursor-pointer"
+              className="flex justify-between items-center font-semibold mt-4 cursor-pointer  hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md"
               onClick={toggleDropdown2}
             >
               <p>Chat Members</p>
@@ -908,7 +909,7 @@ export default function chats() {
             </div>
             {isDropdown2 && (
               <div className="flex flex-col">
-                <div className="flex justify-between items-center my-2">
+                <div className="flex justify-between items-center my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 p-0.5 rounded-md">
                   <div className="max-h-10 relative mr-5">
                     <AccountCircleIcon
                       className="mb-6"
@@ -928,7 +929,7 @@ export default function chats() {
                     />
                   </div>
                 </div>
-                <div className="flex justify-between items-center my-2">
+                <div className="flex justify-between items-center my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 p-0.5 rounded-md">
                   <div className="max-h-10 relative mr-5">
                     <AccountCircleIcon
                       className="mb-6"
@@ -948,7 +949,7 @@ export default function chats() {
                     />
                   </div>
                 </div>
-                <div className="flex justify-between items-center my-2">
+                <div className="flex justify-between items-center my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 p-0.5 rounded-md">
                   <div className="max-h-10 relative mr-5">
                     <AccountCircleIcon
                       className="mb-6"
@@ -971,7 +972,7 @@ export default function chats() {
               </div>
             )}
             <div
-              className="flex justify-between items-center font-semibold mt-4 cursor-pointer"
+              className="flex justify-between items-center font-semibold mt-4 cursor-pointer  hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md"
               onClick={toggleDropdown3}
             >
               <p className="flex justify-start">Media and Files</p>
@@ -986,24 +987,24 @@ export default function chats() {
             </div>
             {isDropdown3 && (
               <div>
-                <div className="flex justify-start items-center my-2">
+                <div className="flex justify-start items-center my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md">
                   <AttachFileOutlinedIcon
                     className="bg-gray-200 rounded-full p-1 mr-3"
                     sx={{ width: 30, height: 30, transform: "rotate(45deg)" }}
                   />
                   <p className="text-sm">Attachment</p>
                 </div>
-                <div className="flex justify-start items-center  my-2">
+                <div className="flex justify-start items-center  my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md">
                   <PhotoOutlinedIcon
                     className="bg-gray-200 rounded-full p-1 mr-3"
                     sx={{ width: 30, height: 30 }}
                   />
-                  <p>Media</p>
+                  <p className="text-sm">Media</p>
                 </div>
               </div>
             )}
             <div
-              className="flex justify-between items-center font-semibold mt-4 cursor-pointer"
+              className="flex justify-between items-center font-semibold mt-4 cursor-pointer  hover:bg-gray-300 transition-all ease-in-out duration-500 p-1 pl-3 rounded-md"
               onClick={toggleDropdown4}
             >
               <p>Privacy & Support</p>
