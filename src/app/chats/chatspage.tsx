@@ -180,7 +180,7 @@ export default function chats() {
                 sx={{ color: "gray", width: 50, height: 50 }}
               />
               <AccountCircleIcon
-                className="mb-6 absolute -top-5 left-7 rounded-full bg-white group-hover:bg-gray-300 hover:bg-gray-300 transition-all ease-in-out duration-500"
+                className="mb-6 absolute -top-5 left-7 rounded-full bg-white group-hover:bg-gray-300 hover:bg-gray-300 transition-background ease-in-out duration-100"
                 sx={{ color: "gray", width: 50, height: 50 }}
               />
             </div>
