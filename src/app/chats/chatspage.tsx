@@ -31,6 +31,7 @@ import SupervisedUserCircleTwoToneIcon from "@mui/icons-material/SupervisedUserC
 import CreateIcon from "@mui/icons-material/Create";
 
 import { useState } from "react";
+import { Divider } from "@mui/material";
 
 export default function chats() {
   const [isDropdown1, setIsDropdown1] = useState(false);
@@ -736,13 +737,14 @@ export default function chats() {
                 />
                 <p className="text-sm">Mark as read</p>
               </div>
-              <div className="flex justify-start items-center my-2 border-solid cursor-pointer border-white border-b-gray-300 py-1  hover:bg-gray-300 transition-all ease-in-out duration-500 px-2  rounded-md">
+              <div className="flex justify-start items-center my-2 py-1 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 px-2  rounded-md">
                 <NotificationsOffIcon
                   className="bg-gray-200 rounded-full p-1 mr-3 "
                   sx={{ width: 30, height: 30 }}
                 />
                 <p className="text-sm">Mute Notifications</p>
               </div>
+              <div className="border-solid  border-white border-b-gray-300" />
               <div
                 className="flex justify-start items-center  my-2 cursor-pointer hover:bg-gray-300 transition-all ease-in-out duration-500 px-2 py-1 rounded-md"
                 onClick={togglePopup8}
