@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The tool used for styling are mostly Tailwind CSS, and Material UI for some parts.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The tool used for styling is mostly Tailwind CSS, and Material UI for some parts.
 
 ## Getting Started
 
