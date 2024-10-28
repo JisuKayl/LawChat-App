@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/c7bf6689-5e4a-472c-9a84-ca8c12f85190)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The tool used for styling is mostly Tailwind CSS, and Material UI for some parts.
 
 ## Getting Started
